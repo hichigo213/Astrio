@@ -1,0 +1,135 @@
+.slider-container
+  max-width: 475px
+  margin: auto
+  position:  relative
+  height: 215px
+
+.slides
+  display: none
+
+.prev, .next
+  cursor: pointer
+  position: absolute
+  bottom: 15px
+  height: 38px
+  width: 38px
+  text-align: center
+  color: white
+  font-weight: bold
+  font-size: 22px
+  transition: 0.6s ease
+  border-radius: 3px 3px 3px 3px
+  user-select: none
+  background-color: rgba(0,0,0,0.3)
+  .arrow
+    margin: 3px 0 0 0
+
+
+
+.prev
+  left: 10px
+.next
+  right: 10px
+
+.prev:hover, .next:hover
+  background-color: rgba(0,0,0,0.8)
+
+.fade
+  animation-name: fade
+  animation-duration: 2s
+  @keyframes fade
+    from
+      opacity: 0.4
+    to
+      opacity: 1
+
+body
+  display: flex
+  justify-content: center
+  font-family: Arial, serif
+.list-container
+  max-width: 500px
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  position: relative
+
+  .list-item
+    position: relative
+    width: 150px
+    height: 280px
+    background-color: transparent
+    margin-top: 10px
+    box-sizing: border-box
+    border: 2px transparent solid
+    .rating
+      text-align: center
+      width: auto
+      &:before, &:after
+        content: ''
+        box-sizing: border-box
+        display: inline-block
+        vertical-align: middle
+        width: 40px
+        height: 2px
+        background: black
+        border: solid black
+        border-width: 0 thin
+      &:before
+        margin-left: -100%
+      &:after
+        margin-right: -100%
+    .item-content
+      width: 100%
+      height: 100%
+      button
+        font-size: 12px
+        color: white
+        background-color: #3a3a3a
+        height: 30px
+        margin-left: 20px
+        margin-top: 7px
+        border: 0
+      .price-box
+        display: flex
+      .price
+        margin-left: 5px
+        font-size: 12px
+        font-weight: bold
+      .dollars
+        font-size: 18px
+      .image
+        width: 100%
+      .item-title
+        margin-top: 5px
+        margin-bottom: 0
+    .item-description
+      display: none
+      width: 150px
+      height: auto
+      position: relative
+      z-index: 100
+      top: -11px
+      font-size: 11px
+      border-bottom: 2px #eb5c3e solid
+      border-right: 2px #eb5c3e solid
+      border-left: 2px #eb5c3e solid
+      box-shadow: 0 5px 10px rgba(0,0,0,0.5)
+      box-sizing: border-box
+      margin-left: -2px
+      padding-left: 2px
+    &:hover
+      border-top: 2px #eb5c3e solid
+      border-right: 2px #eb5c3e solid
+      border-left: 2px #eb5c3e solid
+      box-shadow: 0 0 10px rgba(0,0,0,0.5)
+      background-color: white
+      .item-description
+        display: block
+        background-color: white
+      .hovered
+        color: #eb5c3e
+      button
+        background-color: #eb5c3e
+
+
